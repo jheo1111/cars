@@ -54,7 +54,7 @@ public class CartController {
     }
 
     @PatchMapping(value = "/cartItem/{cartItemId}")
-    public @ResponseBody ResponseEntity updateCartItem(@PathVariable("cartItemId") Long cartItemId,
+    public @ResponseBody ResponseEntity<?> updateCartItem(@PathVariable("cartItemId") Long cartItemId,
                                                        int count, Principal principal) {
         if (count <= 0) {
             return new ResponseEntity<String>("최소 1개 이상 담아주세요.", HttpStatus.BAD_REQUEST);
@@ -63,6 +63,17 @@ public class CartController {
         }
 
         cartService.updateCartItemCount(cartItemId, count);
+        return new ResponseEntity<Long>(cartItemId, HttpStatus.OK);
+    }
+
+    @DeleteMapping(value = "/cartItem/{cartItemId}")
+    public @ResponseBody ResponseEntity<?> deleteCartItem(@PathVariable("cartItemId") Long cartItemId,
+                                                          Principal principal) {
+        if (!cartService.validateCartItem(cartItemId, principal.getName())) {
+            return new ResponseEntity<String>("수정 권한이 없습니다.", HttpStatus.FORBIDDEN);
+        }
+
+        cartService.deleteCartItem(cartItemId);
         return new ResponseEntity<Long>(cartItemId, HttpStatus.OK);
     }
 }
