@@ -33,6 +33,9 @@ public class ItemService {
         itemRepository.save(item);
 
         for (int i = 0; i < itemImgFileList.size(); i++) {
+            if (itemImgFileList.get(i).isEmpty()) {
+                continue;
+            }
             ItemImg itemImg = new ItemImg();
             itemImg.setItem(item);
             if (i == 0) {
