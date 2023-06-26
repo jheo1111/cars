@@ -40,9 +40,12 @@ public class ItemController {
         if (bindingResult.hasErrors()) {
             return "item/itemForm";
         }
+
         if (itemImgFileList.get(0).isEmpty() && itemFormDto.getId() == null) {
             model.addAttribute("errorMessage", "첫 번째 상품 이미지는 필수 입력 값입니다.");
+            return "item/itemForm";
         }
+
         try {
             itemService.saveItem(itemFormDto, itemImgFileList);
         } catch (Exception e) {
@@ -95,5 +98,12 @@ public class ItemController {
         model.addAttribute("itemSearchDto", itemSearchDto);
         model.addAttribute("maxPage", 5);
         return "item/itemMng";
+    }
+
+    @GetMapping(value = "item/{itemId}")
+    public String itemDtl(Model model, @PathVariable("itemId") Long itemId) {
+        ItemFormDto itemFormDto = itemService.getItemDtl(itemId);
+        model.addAttribute("item", itemFormDto);
+        return "item/itemDtl";
     }
 }
