@@ -1,7 +1,7 @@
 # Shopping Mall Project
 <p align="center">
   <br>
-  <img src="https://img.freepik.com/free-photo/person-adding-clothes-cart-closeup-online-shopping-campaign_53876-96211.jpg?size=626&ext=jpg&ga=GA1.2.2044306599.1685600497&semt=ais">
+  <img src="">
   <br>
 </p>
 
@@ -28,25 +28,18 @@
 ## 📌 Introduction to Project Features
 
 ### 회원가입
-<img alt="회원가입" src="./image/회원가입.gif" width="600" height=auto>
 
 ### 로그인
-<img alt="로그인" src="./image/로그인.gif" width="600" height=auto>
 
 ### 메인 화면
-<img alt="메인 화면" src="./image/메인화면.gif" width="600" height=auto>
 
 ### 상품 등록
-<img alt="상품 등록" src="./image/상품등록.gif" width="600" height=auto>
 
 ### 상품 관리
-<img alt="상품 관리" src="./image/상품관리.gif" width="600" height=auto>
 
 ### 상품 상세
-<img alt="상품 상세" src="./image/상품상세.gif" width="600" height=auto>
 
 ### 장바구니 및 주문
-<img alt="장바구니 및 주문" src="./image/장바구니 및 주문.gif" width="600" height=auto>
 
 
 <br>
