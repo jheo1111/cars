@@ -1,43 +1,57 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-
 <div th:fragment="header">
-    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
-                aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="/">Shop</a>
+        <a class="navbar-brand font-weight-bold text-white" href="/"
+           style="
+           margin:8px;
+           padding: 5px 20px;
+           font-size: 1.8rem;
+           color: #ffffff;
+           background: linear-gradient(135deg, #e63946, #1d3557);
+           border-radius: 30px;
+           text-transform: uppercase;
+           font-family: 'Poppins', sans-serif;
+           letter-spacing: 3px;
+           text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+           transition: all 0.3s ease;
+           display: inline-block;
+           text-decoration: none;"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.5)';"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.4)';">
+            주원슈퍼카
+        </a>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-left:10px;">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
-                    <a class="nav-link" href="/admin/item/new">상품 등록</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/admin/item/new" style="letter-spacing: 2px;">등록</a>
                 </li>
-                <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
-                    <a class="nav-link" href="/admin/items">상품 관리</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/admin/items" style="letter-spacing: 2px;">관리</a>
                 </li>
-                <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <a class="nav-link" href="/cart">장바구니</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/cart" style="letter-spacing: 2px;">장바구니</a>
                 </li>
-                <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <a class="nav-link" href="/orders">구매이력</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/orders" style="letter-spacing: 2px;">구매이력</a>
                 </li>
-                <li class="nav-item" sec:authorize="isAnonymous()">
-                    <a class="nav-link" href="/members/login">로그인</a>
-                </li>
-                <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <a class="nav-link" href="/members/logout">로그아웃</a>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/members/login" style="letter-spacing: 2px;">로그인</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
-                <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input name="searchQuery"
+                       class="form-control mr-sm-2"
+                       type="search"
+                       placeholder="모델명 또는 브랜드를 입력하세요."
+                       aria-label="Search"
+                       style="width:300px;"
+                >
+                <button class="btn btn-primary my-2 my-sm-0" type="submit" style="padding:10px 20px 10px 20px;">검색</button>
             </form>
         </div>
     </nav>
 </div>
-
-</html>

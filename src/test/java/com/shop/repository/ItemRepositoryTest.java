@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @SpringBootTest
-@TestPropertySource(locations = "classpath:application-test.properties")
+@TestPropertySource(locations = "classpath:application.properties")
 class ItemRepositoryTest {
     @Autowired
     ItemRepository itemRepository;

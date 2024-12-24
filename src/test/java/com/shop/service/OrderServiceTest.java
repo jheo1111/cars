@@ -2,7 +2,6 @@ package com.shop.service;
 
 import com.shop.constant.ItemSellStatus;
 import com.shop.constant.OrderStatus;
-import com.shop.dto.MemberFormDto;
 import com.shop.dto.OrderDto;
 import com.shop.entity.Item;
 import com.shop.entity.Member;
@@ -19,14 +18,13 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
-import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @Transactional
-@TestPropertySource(locations = "classpath:application-test.properties")
+@TestPropertySource(locations = "classpath:application.properties")
 public class OrderServiceTest {
 
     @Autowired

@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
 
 @SpringBootTest
 @Transactional
-@TestPropertySource(locations = "classpath:application-test.properties")
+@TestPropertySource(locations = "classpath:application.properties")
 public class MemberTest {
 
     @Autowired
