@@ -1,60 +1,67 @@
-# Shopping Mall Project
+# 슈퍼카 판매 웹사이트 프로젝트
+
 <p align="center">
-  <br>
-  <img src="">
-  <br>
+  <img src="" alt="Project Logo" style="max-width: 100%; height: auto;">
 </p>
 
+## 📖 프로젝트 개요
+이 프로젝트는 학습을 목적으로 진행된 SSR 기반의 Spring Boot 애플리케이션입니다.
+Spring Data JPA, Thymeleaf, Spring Security 등을 활용하여 실제 운영 가능한 수준의 웹 애플리케이션을 구현하는 데 초점을 맞췄습니다.
 
-* 학습 용도 프로젝트
-* 참고 도서 : 스프링 부트 쇼핑몰 프로젝트 with JPA
-* Duration : 2022.12 - 2023.06
-* 주요 특징
-  * SSR 방식 Spring Boot 프로젝트
-  * Spring Data JPA 기초
-  * Junit을 이용한 테스트 코드 작성
-  * Thymeleaf를 이용한 화면 구성
-  * Spring Security를 이용한 회원 인증 및 인가
+- **참고 도서:** 스프링 부트 쇼핑몰 프로젝트 with JPA  
 
-<br>
+### 주요 기능 및 특징
+- 서버 사이드 렌더링(SSR) 방식 구현
+- Spring Data JPA를 활용한 데이터베이스 처리
+- JUnit 기반 테스트 코드 작성
+- Thymeleaf를 활용한 UI 템플릿 엔진
+- Spring Security로 회원 인증 및 권한 관리
 
-## 💻 Stacks Used
-|   Java   |   Spring   |   Spring Boot   |                                         Spring Security                                         |   MySQL   | thymeleaf |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |:-----------------------------------------------------------------------------------------------:| :----------------------------------------------------------: |  :----------------------------------------------------------: |
-| <div style="display: flex; align-items: flex-start;"><img src="https://techstack-generator.vercel.app/java-icon.svg" alt="icon" width="65" height="65" /></div> | <img alt="spring logo" src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" height="50" width="50" > | <img alt="spring-boot logo" src="https://t1.daumcdn.net/cfile/tistory/27034D4F58E660F616" width="65" height="65" > | <img alt="spring-security logo" src="./image/spring_security_logo.png" width="85" height=auto > | <div style="display: flex; align-items: flex-start;"><img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="icon" width="65" height="65" /></div> | <div style="display: flex; align-items: flex-start;"><img src="https://www.thymeleaf.org/images/thymeleaf.png" alt="icon" width="65" height="65" /></div> |
+---
 
-<br>
+## 💻 사용 기술 스택
 
-## 📌 Introduction to Project Features
+|   Java   |   Spring Framework   |   Spring Boot   |   Spring Security   |   MySQL   |   Thymeleaf   |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: | :----------------------------------------------------------: |  :----------------------------------------------------------: |
+| <img src="https://techstack-generator.vercel.app/java-icon.svg" alt="Java Icon" width="65" height="65" /> | <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Framework Icon" width="50" height="50" /> | <img src="https://t1.daumcdn.net/cfile/tistory/27034D4F58E660F616" alt="Spring Boot Icon" width="65" height="65" /> | <img src="./image/spring_security_logo.png" alt="Spring Security Logo" width="85" /> | <img src="https://techstack-generator.vercel.app/mysql-icon.svg" alt="MySQL Icon" width="65" height="65" /> | <img src="https://www.thymeleaf.org/images/thymeleaf.png" alt="Thymeleaf Icon" width="65" height="65" /> |
 
-### 회원가입
+---
 
-### 로그인
+## 📌 프로젝트 주요 기능
 
-### 메인 화면
+### 1. 회원 관리
+- **회원가입**: 유효성 검사 및 데이터 저장
+- **로그인**: Spring Security를 이용한 인증 및 세션 관리
 
-### 상품 등록
+### 2. 상품 관리
+- **상품 등록**: 관리자 전용 상품 추가 기능
+- **상품 관리**: 상품 정보 수정 및 삭제
+- **상품 상세**: 상품별 상세 페이지 제공
 
-### 상품 관리
+### 3. 주문 기능
+- **장바구니**: 상품 담기 및 수량 조정 기능
+- **주문 처리**: 장바구니 상품 주문 및 결제
 
-### 상품 상세
+### 4. 메인 화면
+- 최신 상품 및 인기 상품 노출
 
-### 장바구니 및 주문
+---
 
+## 📢 Git 관리 규칙
 
-<br>
+### 1. 커밋 컨벤션
 
-## 📢 Github Rule
+|  커밋 메시지 유형   | 설명                                                  |
+| :-----------------: | :--------------------------------------------------- |
+| `add`               | 새로운 프로젝트, 파일, 기능 추가                     |
+| `feat`              | 신규 기능 구현                                       |
+| `fix`               | 버그 수정                                            |
+| `refactor`          | 코드 리팩토링                                        |
+| `style`             | 코드 스타일 변경 (포매팅, 세미콜론 추가 등)          |
+| `remove`            | 불필요한 파일 및 폴더 삭제                           |
+| `rename`            | 파일 및 폴더 이름 변경                               |
+| `chore`             | 빌드 설정 수정 및 기타 사소한 작업                   |
 
-### Commit Convention
+---
 
-|  Message   | 설명                                                  |
-| :--------: | :---------------------------------------------------- |
-| `add` | 새로운 프로젝트, 파일 등 추가 |
-| `feat` | 새로운 기능 추가 |
-| `fix` | 버그 수정 |
-| `refactor` | 코드 리팩토링 |
-| `style` | 코드 포맷팅, 세미콜론 누락, 코드 스타일 변경 등 |
-| `remove` | 사용하지 않는 파일 또는 폴더 삭제 |
-| `rename` | 파일 또는 폴더명 수정 |
-| `chore` | 빌드 업무 수정, 패키지 매니저 수정 |
+**더 많은 정보는 프로젝트 소스 코드에서 확인할 수 있습니다. 감사합니다!**
