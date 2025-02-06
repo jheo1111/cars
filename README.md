@@ -1,9 +1,5 @@
 # 슈퍼카 판매 웹사이트 프로젝트
 
-<p align="center">
-  <img src="" alt="Project Logo" style="max-width: 100%; height: auto;">
-</p>
-
 ## 📖 프로젝트 개요
 이 프로젝트는 학습을 목적으로 진행된 SSR 기반의 Spring Boot 애플리케이션입니다.
 Spring Data JPA, Thymeleaf, Spring Security 등을 활용하여 실제 운영 가능한 수준의 웹 애플리케이션을 구현하는 데 초점을 맞췄습니다.
